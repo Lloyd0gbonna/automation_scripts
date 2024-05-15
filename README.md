@@ -2,26 +2,23 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Folder Structure](#folder-structure)
-  - [Scripts](#scripts)
-  - [Utilities](#utilities)
-  - [Tests](#tests)
+- [Folder](#folder)
+  - [Email scripts](#email-scripts)
+  - [Hashing scripts](#hashing-scripts)
+  - [Network scripts](#network-scripts)
+  - [Web scrapers](#web-scrapers)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
-Welcome to my Automation Scripts Repository! This repository contains various automation scripts to streamline your tasks and workflows. This folder will be periodically updated. 
+Welcome to my Automation Scripts Repository! This repository contains various automation scripts to streamline tasks and workflows.
 
-## Folder Structure
-### Scripts
-This folder contains the main automation scripts for performing specific tasks.
-
-### Utilities
-The Utilities folder houses supporting scripts and tools used by the main automation scripts.
-
-### Tests
-You'll find test scripts here, used for testing the functionality and integrity of the automation scripts.
+## Folder
+- [Email scripts](#email-scripts)
+- [Hashing scripts](#hashing-scripts)
+- [Network scripts](#network-scripts)
+- [Web scrapers](#web-scrapers)
 
 ## Usage
 Each script comes with its own README file detailing its purpose and usage instructions.
@@ -34,4 +31,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Thank you for exploring our Automation Scripts Repository!
+Thank you for exploring my Automation Scripts Repository!
