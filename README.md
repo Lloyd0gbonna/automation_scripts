@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Folder](#folder)
+- [Folders](#folders)
   - [Email scripts](#email-scripts)
   - [Hashing scripts](#hashing-scripts)
   - [Network scripts](#network-scripts)
@@ -14,7 +14,7 @@
 ## Introduction
 Welcome to my Automation Scripts Repository! This repository contains various automation scripts to streamline tasks and workflows.
 
-## Folder
+## Folders
 - [Email scripts](#email-scripts)
 - [Hashing scripts](#hashing-scripts)
 - [Network scripts](#network-scripts)
