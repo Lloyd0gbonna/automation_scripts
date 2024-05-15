@@ -30,7 +30,7 @@ def send_email(subject, message, to_email):
 # Email parameters
 subject = "Hello World"
 message = "This is a test email. Hello, World!"
-to_email = "lloyduogbonna@gmail.com"
+to_email = "example@gmail.com"
 
 # Send email
 send_email(subject, message, to_email)
