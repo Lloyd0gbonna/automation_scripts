@@ -2,6 +2,12 @@ from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
 import atexit
 import ssl
+import hashlib
+
+def generate_hash(string):
+    # Generate a SHA-256 hash from the given string
+    hash_object = hashlib.sha256(string.encode())
+    return hash_object.hexdigest()[:8]  # Return the first 8 characters of the hash as the name
 
 # Disable SSL certificate verification
 ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
@@ -21,8 +27,10 @@ content = si.RetrieveContent()
 datacenter = content.rootFolder.childEntity[0]
 vm_folder = datacenter.vmFolder
 
+# Generate a unique VM name using a hash
+vm_name = generate_hash("Unique_VM_Name")
+
 # Create VM configuration
-vm_name = "New_VM"
 vmx_file = vim.vm.FileInfo(logDirectory=None, snapshotDirectory=None, suspendDirectory=None, vmPathName=None)
 config = vim.vm.ConfigSpec(name=vm_name, memoryMB=512, numCPUs=1, files=vmx_file, guestId="ubuntu64")
 
