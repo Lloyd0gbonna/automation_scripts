@@ -3,6 +3,11 @@ from pyVmomi import vim
 import atexit
 import ssl
 import hashlib
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 def generate_hash(string):
     # Generate a SHA-256 hash from the given string
@@ -14,9 +19,13 @@ ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
 ssl_context.verify_mode = ssl.CERT_NONE
 
 # Connect to vCenter server
-si = SmartConnect(host="your_vcenter_ip",
-                  user="your_username",
-                  pwd="your_password",
+host = os.getenv("VCENTER_HOST")
+user = os.getenv("VCENTER_USER")
+pwd = os.getenv("VCENTER_PASSWORD")
+
+si = SmartConnect(host=host,
+                  user=user,
+                  pwd=pwd,
                   sslContext=ssl_context)
 
 # Disconnect when done
@@ -27,8 +36,11 @@ content = si.RetrieveContent()
 datacenter = content.rootFolder.childEntity[0]
 vm_folder = datacenter.vmFolder
 
+# Prompt user for VM name
+vm_name = input("Enter a name for the VM: ")
+
 # Generate a unique VM name using a hash
-vm_name = generate_hash("Unique_VM_Name")
+vm_name = generate_hash(vm_name)
 
 # Create VM configuration
 vmx_file = vim.vm.FileInfo(logDirectory=None, snapshotDirectory=None, suspendDirectory=None, vmPathName=None)
