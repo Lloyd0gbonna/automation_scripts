@@ -7,6 +7,7 @@
   - [Hashing scripts](#hashing-scripts)
   - [Network scripts](#network-scripts)
   - [Web scrapers](#web-scrapers)
+  - [Virtual Machines](#virtual-machines)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -19,9 +20,10 @@ Welcome to my Automation Scripts Repository! This repository contains various au
 - [Hashing scripts](#hashing-scripts)
 - [Network scripts](#network-scripts)
 - [Web scrapers](#web-scrapers)
+- [Virtual Machines](#virtual-machines)
 
 ## Usage
-Each script comes with its own README file detailing its purpose and usage instructions.
+Each script contains comments detailing the need and use for the code. 
 
 ## Contributing
 Contributions are welcome! If you have any improvements or new scripts to add, feel free to submit a pull request.
